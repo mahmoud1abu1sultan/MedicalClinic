@@ -66,12 +66,12 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private ImageView youtybeRed;
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Atrebute^
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         from_Loding$Window_to();
-    }
+    }//END;
 
     private void taskLoding() {
         Task<Void> task = new Task<Void>() {
@@ -87,21 +87,21 @@ public class FXMLDocumentController implements Initializable {
                 }
                 return null;
             }
-        };
+        };//END;
 
         task.messageProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 lodingText.setText(newValue + " Reading ...");
             }
-        });
+        });//END;
 
         progressBar.progressProperty().unbind();
         progressBar.progressProperty().bind(task.progressProperty());
         Thread th = new Thread(task);
         th.setDaemon(true);
         th.start();
-    }
+    }//END;
 
 //=++++++++++++++++++++++++++++++++++++++++
     private void from_Loding$Window_to() {
@@ -111,10 +111,10 @@ public class FXMLDocumentController implements Initializable {
             public void run() {
                 try {
                     taskLoding();
-                    Thread.sleep(10000);//10000
+                    Thread.sleep(15000);//10000 -> 15000
                 } catch (InterruptedException ex) {
                     System.out.println(ex + " (-_-)");
-                }
+                }//END;
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
@@ -134,8 +134,8 @@ public class FXMLDocumentController implements Initializable {
                     }
                 });
             }
-        }.start();
-    }
+        }.start();//END;
+    }//END;
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //++minimze|close
 
@@ -143,84 +143,96 @@ public class FXMLDocumentController implements Initializable {
     private void showMinimizeRed(MouseEvent event) {
         minemumRed.setVisible(true);
         minemum.setOpacity(0);
-    }
+    }//END;
+
     @FXML
     private void showCloseRed(MouseEvent event) {
         closeRed.setVisible(true);
         close.setOpacity(0);
-    }
+    }//END;
+
     @FXML
     private void hidenMinimizeRed(MouseEvent event) {
         minemumRed.setVisible(false);
         minemum.setOpacity(1);
-    }
+    }//END;
+
     @FXML
     private void hidenCloseRed(MouseEvent event) {
         closeRed.setVisible(false);
         close.setOpacity(1);
-    }
+    }//END;
 
     @FXML
     private void mininizing(MouseEvent event) {
         Stage stage = (Stage) LodingScreen.getScene().getWindow();
         stage.setIconified(true);
-    }
+    }//END;
 
     @FXML
     private void closing(MouseEvent event) {
         javafx.application.Platform.exit();
-    }
+    }//END;
 //sochialmedia
 
     @FXML
     private void hidenEmailRed(MouseEvent event) {
         emailRed.setVisible(false);
         email.setOpacity(1);
-    }
+    }//END;
+
     @FXML
     private void showEmailRed(MouseEvent event) {
         emailRed.setVisible(true);
         email.setOpacity(0);
-    }
+    }//END;
+
     @FXML
     private void hidenInstaRed(MouseEvent event) {
         instegramRed.setVisible(false);
         instegram.setOpacity(1);
-    }
+    }//END;
+
     @FXML
     private void showInstaRed(MouseEvent event) {
         instegramRed.setVisible(true);
         instegram.setOpacity(0);
-    }
+    }//END;
+
     @FXML
     private void hidenFaceBookRed(MouseEvent event) {
         faceBookRed.setVisible(false);
         faceBook.setOpacity(1);
-    }
+    }//END;
+
     @FXML
     private void showFaceBookRed(MouseEvent event) {
         faceBookRed.setVisible(true);
         faceBook.setOpacity(0);
-    }
+    }//END;
+
     @FXML
     private void hidenTueterRed(MouseEvent event) {
         tuetarRed.setVisible(false);
         tuetar.setOpacity(1);
-    }
+    }//END;
+
     @FXML
     private void showTueterRed(MouseEvent event) {
         tuetarRed.setVisible(true);
         tuetar.setOpacity(0);
-    }
+    }//END;
+
     @FXML
     private void hidenYoutupRed(MouseEvent event) {
         youtybeRed.setVisible(false);
         youtybe.setOpacity(1);
-    }
+    }//END;
+
     @FXML
     private void showYoutupRed(MouseEvent event) {
         youtybeRed.setVisible(true);
         youtybe.setOpacity(0);
-    }
+    }//END;
 
-}//END;
+}//END class;

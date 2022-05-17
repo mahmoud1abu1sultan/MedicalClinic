@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!-- @Author MAHMOUD.T -->
+
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
@@ -308,21 +310,29 @@
                         </Button>
                     </children>
                 </HBox>
-                <Label fx:id="notpassCreat" layoutX="91.0" layoutY="102.0" text="Password does not match!!!" textFill="#ff2d12" visible="false">
+                <Label fx:id="notpassCreat" layoutX="91.0" layoutY="102.0" text="Password does not match -_-" textFill="#ff2d12" visible="false">
                     <font>
                         <Font name="Verdana" size="14.0" />
                     </font>
                 </Label>
-                <RadioButton fx:id="maleSelect" layoutX="77.0" layoutY="427.0" mnemonicParsing="false" text="Male" textFill="#a9e031" />
-                <RadioButton fx:id="femaleSelect" layoutX="135.0" layoutY="427.0" mnemonicParsing="false" text="Female" textFill="#a9e031" />
+                <RadioButton fx:id="maleSelect" layoutX="77.0" layoutY="427.0" mnemonicParsing="false" text="Male" textFill="#a9e031">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="groobGender" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="femaleSelect" layoutX="135.0" layoutY="427.0" mnemonicParsing="false" text="Female" textFill="#a9e031" toggleGroup="$groobGender" />
                 <TextField fx:id="logupAge" layoutX="172.0" layoutY="179.0" prefHeight="40.0" prefWidth="44.0" promptText="Age" style="-fx-border-color: #a9e031; -fx-border-width: 2; -fx-background-color: #1f242a; -fx-text-fill: #ffffff;" />
                 <Label layoutX="180.0" layoutY="159.0" text="Age" textFill="#a9e031">
                     <font>
                         <Font name="Verdana" size="14.0" />
                     </font>
                 </Label>
-                <RadioButton fx:id="doctorSelect" layoutX="209.0" layoutY="447.0" mnemonicParsing="false" text="Doctor" textFill="#a9e031" />
-                <RadioButton fx:id="nurseSelect" layoutX="269.0" layoutY="447.0" mnemonicParsing="false" text="Nurse" textFill="#a9e031" />
+                <RadioButton fx:id="doctorSelect" layoutX="209.0" layoutY="447.0" mnemonicParsing="false" text="Doctor" textFill="#a9e031">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="groobType" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="nurseSelect" layoutX="269.0" layoutY="447.0" mnemonicParsing="false" text="Nurse" textFill="#a9e031" toggleGroup="$groobType" />
             </children>
         </Pane>
         <!-- @Author MAHMOUD.T -->

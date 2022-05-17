@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -110,6 +111,10 @@ public class LoginWindowController implements Initializable {
     private RadioButton doctorSelect;
     @FXML
     private RadioButton nurseSelect;
+    @FXML
+    private ToggleGroup groobGender;
+    @FXML
+    private ToggleGroup groobType;
 
     /**
      * Initializes the controller class.
@@ -127,97 +132,97 @@ public class LoginWindowController implements Initializable {
     private void showMinimizeRed(MouseEvent event) {
         minemumRed.setVisible(true);
         minemum.setOpacity(0);
-    }
+    }//END;
 
     @FXML
     private void showCloseRed(MouseEvent event) {
         closeRed.setVisible(true);
         close.setOpacity(0);
-    }
+    }//END;
 
     @FXML
     private void hidenMinimizeRed(MouseEvent event) {
         minemumRed.setVisible(false);
         minemum.setOpacity(1);
-    }
+    }//END;
 
     @FXML
     private void hidenCloseRed(MouseEvent event) {
         closeRed.setVisible(false);
         close.setOpacity(1);
-    }
+    }//END;
 
     @FXML
     private void mininizing(MouseEvent event) {
         Stage stage = (Stage) loginScren.getScene().getWindow();
         stage.setIconified(true);
-    }
+    }//END;
 
     @FXML
     private void closing(MouseEvent event) {
         javafx.application.Platform.exit();
-    }
+    }//END;
 //sochialmedia
 
     @FXML
     private void hidenEmailRed(MouseEvent event) {
         emailRed.setVisible(false);
         email.setOpacity(1);
-    }
+    }//END;
 
     @FXML
     private void showEmailRed(MouseEvent event) {
         emailRed.setVisible(true);
         email.setOpacity(0);
-    }
+    }//END;
 
     @FXML
     private void hidenInstaRed(MouseEvent event) {
         instegramRed.setVisible(false);
         instegram.setOpacity(1);
-    }
+    }//END;
 
     @FXML
     private void showInstaRed(MouseEvent event) {
         instegramRed.setVisible(true);
         instegram.setOpacity(0);
-    }
+    }//END;
 
     @FXML
     private void hidenFaceBookRed(MouseEvent event) {
         faceBookRed.setVisible(false);
         faceBook.setOpacity(1);
-    }
+    }//END;
 
     @FXML
     private void showFaceBookRed(MouseEvent event) {
         faceBookRed.setVisible(true);
         faceBook.setOpacity(0);
-    }
+    }//END;
 
     @FXML
     private void hidenTueterRed(MouseEvent event) {
         tuetarRed.setVisible(false);
         tuetar.setOpacity(1);
-    }
+    }//END;
 
     @FXML
     private void showTueterRed(MouseEvent event) {
         tuetarRed.setVisible(true);
         tuetar.setOpacity(0);
-    }
+    }//END;
 
     @FXML
     private void hidenYoutupRed(MouseEvent event) {
         youtybeRed.setVisible(false);
         youtybe.setOpacity(1);
-    }
+    }//END;
 
     @FXML
     private void showYoutupRed(MouseEvent event) {
         youtybeRed.setVisible(true);
         youtybe.setOpacity(0);
-    }
+    }//END;
 //^^^
 
     @FXML
@@ -247,7 +252,7 @@ public class LoginWindowController implements Initializable {
         } else {
             loginNotCorrect.setVisible(true);
         }
-    }
+    }//END;
 
     @FXML
     private void creatNewAcountClick(MouseEvent event) {
@@ -256,7 +261,7 @@ public class LoginWindowController implements Initializable {
         }
         newAcountPane.setVisible(true);
 //        
-    }
+    }//END;
 
     @FXML
     private void forgetPass(MouseEvent event) {
@@ -268,40 +273,51 @@ public class LoginWindowController implements Initializable {
         }
         resendLod.setProgress(0);
         forgetPane.setVisible(true);
-    }
+    }//END;
 
     @FXML
     private void singUpClick(MouseEvent event) {
-        String fName_su = logupFName.getText();
-        String lName_su = logupLNmae.getText();
-        String email_su = logupEmail.getText();
-        String pass_su = logupPassword.getText();
-        String gender_us = (maleSelect.isSelected()) ? "male" : "female";
-        int age_us = Integer.decode(logupAge.getText());
-        String specialization_su = (doctorSelect.isSelected()) ? "doctor" : "nurse";
-//        int status = (Casedoctor.isSelected()) ? 1 : 0;
-
-        if (logupPassword.getText().equalsIgnoreCase(logupConfirmPassword.getText())
-                && !logupPassword.getText().isEmpty()
-                && !logupFName.getText().isEmpty()
+        if (!logupFName.getText().isEmpty()
                 && !logupLNmae.getText().isEmpty()
+                && !logupPassword.getText().isEmpty()
+                && !logupConfirmPassword.getText().isEmpty()
+                && !logupPassword.getText().isEmpty()
                 && !logupEmail.getText().isEmpty()
                 && (maleSelect.isSelected() ^ femaleSelect.isSelected())
                 && !logupAge.getText().isEmpty()) {
-            Doctors user = new Doctors(fName_su, lName_su, email_su, pass_su, gender_us, age_us, specialization_su);
-            MyDatabase.singUp(user);
 
-            //------------------------------
-            if (notpassCreat.isVisible()) {
-                notpassCreat.setVisible(false);
+            String fName_su = logupFName.getText();
+            String lName_su = logupLNmae.getText();
+            String email_su = logupEmail.getText();
+            String pass_su = logupPassword.getText();
+            String gender_us = (maleSelect.isSelected()) ? "male" : "female";
+            int age_us = Integer.decode(logupAge.getText());
+            String specialization_su = (doctorSelect.isSelected()) ? "doctor" : "nurse";
+//        int status = (Casedoctor.isSelected()) ? 1 : 0;
+
+            if (logupPassword.getText().equalsIgnoreCase(logupConfirmPassword.getText())
+                    && (maleSelect.isSelected() ^ femaleSelect.isSelected())
+                    && !logupAge.getText().isEmpty()) {
+                Doctors user = new Doctors(fName_su, lName_su, email_su, pass_su, gender_us, age_us, specialization_su);
+                MyDatabase.singUp(user);
+
+                //------------------------------
+                if (notpassCreat.isVisible()) {
+                    notpassCreat.setVisible(false);
+                }
+                newAcountPane.setVisible(false);
+                successCreat.setText("Successful Createing (^_^)");
+                successCreat.setVisible(true);
+            } else {
+                notpassCreat.setText("Password does not match -_-");
+                notpassCreat.setVisible(true);
             }
-            newAcountPane.setVisible(false);
-            successCreat.setText("Successful Createing (^_^)");
-            successCreat.setVisible(true);
         } else {
+            notpassCreat.setText("Check the input - Please +_+");
             notpassCreat.setVisible(true);
+
         }
-    }
+    }//END;
 
     @FXML
     private void backCreateClick(MouseEvent event) {
@@ -309,7 +325,7 @@ public class LoginWindowController implements Initializable {
             successCreat.setVisible(false);
         }
         newAcountPane.setVisible(false);
-    }
+    }//END;
 
     @FXML
     private void verificationClick(MouseEvent event) {
@@ -334,13 +350,13 @@ public class LoginWindowController implements Initializable {
         }
         resendLod.setProgress(0);
         forgetPane.setVisible(false);
-    }
+    }//END;
 
     @FXML
     private void resendCode(MouseEvent event) throws InterruptedException {
         resendLod.setVisible(true);
         resendLod.setProgress(1);
-    }
+    }//END;
 
     @FXML
     private void updatePassClick(MouseEvent event) {
@@ -366,7 +382,7 @@ public class LoginWindowController implements Initializable {
         } else {
             notPass.setVisible(true);
         }
-    }
+    }//END;
 
     @FXML
     private void backUpdatePassClick(MouseEvent event) {
@@ -378,6 +394,6 @@ public class LoginWindowController implements Initializable {
         }
         forgetPane.setVisible(false);
         updatePassPane.setVisible(false);
-    }
+    }//END;
 
-}
+}//END class;

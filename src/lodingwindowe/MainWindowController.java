@@ -80,8 +80,6 @@ public class MainWindowController implements Initializable {
     @FXML
     private Label d$numberNurses;
     @FXML
-    private Label d$addNewPatient;
-    @FXML
     private Label d$numberPatients;
     @FXML
     private Label d$numberPatientFemale;
@@ -386,7 +384,7 @@ public class MainWindowController implements Initializable {
     public void reviweTableViwe() {
         ObservableList<Patients> patientList = MyDatabase.patient_info();
         p$tableViweP.setItems(patientList);
-    }
+    }//END;
 //***************************//
 
     public void getInfo(String s) {
@@ -645,7 +643,7 @@ public class MainWindowController implements Initializable {
     }//END;
 
     @FXML
-    private void m$new_News(MouseEvent event) {
+    private void m$new_News(MouseEvent event) {//???????
     }
 //-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Doctor Pane +++
     //>>>
@@ -852,6 +850,26 @@ public class MainWindowController implements Initializable {
         //--
         p$infoSelectP_pane.setVisible(false);
         p$successfull.setVisible(true);
+    }//END;
+
+    @FXML
+    private void d$addNewPatient(MouseEvent event) {
+        doctorPane.setVisible(false);
+        patientPane.setVisible(true);
+        p$addPatient_pane.setVisible(true);
+    }//END;
+
+    @FXML
+    private void d$editeTiom_of_workDocotor(MouseEvent event) {//???????
+    }
+
+    @FXML
+    private void d$editeDoctor(MouseEvent event) {
+        
+    }
+
+    @FXML
+    private void d$editeTodayAppointments(MouseEvent event) {//?????????
     }
 
 }//END ALL;

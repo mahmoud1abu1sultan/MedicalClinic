@@ -16,14 +16,14 @@ public class Doctors extends User {
     public Doctors(String firstName, String lastName, String email, String password, String gender, int age, String specialization) {
         super(firstName, lastName, email, password, gender, age);
         this.specialization = specialization;
-    }
+    }//END;
 
     public String getSpecialization() {
         return specialization;
-    }
+    }//END;
 
     public void setSpecialization(String specialization) {
         this.specialization = specialization;
-    }
+    }//END;
 
-}
+}//END class;

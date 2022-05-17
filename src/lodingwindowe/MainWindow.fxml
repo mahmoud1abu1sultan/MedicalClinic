@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!-- @author MAHMOUD.T -->
+
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
@@ -10,6 +12,8 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+
+<!-- @author MAHMOUD.T -->
 
 <AnchorPane id="AnchorPane" fx:id="MainWindowScreen" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #2f353d;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lodingwindowe.MainWindowController">
     <children>
@@ -484,7 +488,7 @@
                 </VBox>
             </children>
         </Pane>
-        <Pane fx:id="doctorPane" layoutX="50.0" layoutY="50.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2f353d;">
+        <Pane fx:id="doctorPane" layoutX="50.0" layoutY="50.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2f353d;" visible="false">
             <children>
                 <ImageView fitHeight="591.0" fitWidth="977.0" layoutX="12.0" layoutY="7.0" opacity="0.32" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -595,7 +599,7 @@
                                 <Font name="Calibri Bold" size="24.0" />
                             </font>
                         </Label>
-                        <Label layoutX="260.0" layoutY="12.0" style="-fx-background-color: #4deae0; -fx-background-radius: 10;" text="Edite" textFill="WHITE">
+                        <Label layoutX="260.0" layoutY="12.0" onMouseClicked="#d$editeTiom_of_workDocotor" style="-fx-background-color: #4deae0; -fx-background-radius: 10;" text="Edite" textFill="WHITE">
                             <font>
                                 <Font size="13.0" />
                             </font>
@@ -734,7 +738,7 @@
                                 </HBox>
                             </children>
                         </VBox>
-                        <Label layoutX="263.0" layoutY="13.0" style="-fx-background-color: #4deae0; -fx-background-radius: 10;" text="Edite" textFill="WHITE">
+                        <Label layoutX="263.0" layoutY="13.0" onMouseClicked="#d$editeDoctor" style="-fx-background-color: #4deae0; -fx-background-radius: 10;" text="Edite" textFill="WHITE">
                             <font>
                                 <Font size="13.0" />
                             </font>
@@ -821,7 +825,7 @@
                                 <Font name="Calibri Bold" size="24.0" />
                             </font>
                         </Label>
-                        <Label fx:id="d$addNewPatient" layoutX="213.0" layoutY="13.0" style="-fx-background-color: #4deae0; -fx-background-radius: 10;" text="+ Add Patient" textFill="WHITE">
+                        <Label layoutX="213.0" layoutY="13.0" onMouseClicked="#d$addNewPatient" style="-fx-background-color: #4deae0; -fx-background-radius: 10;" text="+ Add Patient" textFill="WHITE">
                             <font>
                                 <Font size="13.0" />
                             </font>
@@ -928,7 +932,7 @@
                                 <Font name="Calibri Bold" size="24.0" />
                             </font>
                         </Label>
-                        <Label layoutX="301.0" layoutY="12.0" style="-fx-background-color: #4deae0; -fx-background-radius: 10;" text="Edite" textFill="WHITE">
+                        <Label layoutX="301.0" layoutY="12.0" onMouseClicked="#d$editeTodayAppointments" style="-fx-background-color: #4deae0; -fx-background-radius: 10;" text="Edite" textFill="WHITE">
                             <font>
                                 <Font size="13.0" />
                             </font>
@@ -1043,7 +1047,7 @@
                 </Pane>
             </children>
         </Pane>
-        <Pane fx:id="homePane" layoutX="50.0" layoutY="50.0" onMouseClicked="#onClickPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2f353d;" visible="false">
+        <Pane fx:id="homePane" layoutX="50.0" layoutY="50.0" onMouseClicked="#onClickPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2f353d;">
             <children>
                 <Pane layoutX="190.0" layoutY="14.0" prefHeight="270.0" prefWidth="575.0" style="-fx-background-color: #0f62ba;">
                     <children>
@@ -1341,7 +1345,7 @@
                 </Pane>
                 <VBox alignment="CENTER" layoutX="14.0" layoutY="11.0" prefHeight="582.0" prefWidth="168.0" spacing="20.0">
                     <children>
-                        <Pane fx:id="doctorPaneSup" prefHeight="138.0" prefWidth="168.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-border-color: #4deae0; -fx-border-radius: 20; -fx-border-width: 2;">
+                        <Pane fx:id="doctorPaneSup" prefHeight="138.0" prefWidth="168.0" style="-fx-background-color: rgba(255, 255, 255,1); -fx-background-radius: 20; -fx-border-color: #4deae0; -fx-border-radius: 20; -fx-border-width: 2;">
                             <children>
                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="105.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -1770,4 +1774,3 @@
         </HBox>
     </children>
 </AnchorPane>
-<!-- @author MAHMOUD.T -->

@@ -23,14 +23,14 @@ public class LodingWindowe extends Application {
         stage.getIcons().add(new Image("icon.png"));
         stage.setScene(scene);
         stage.show();
-    }
+    }//END;
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Say Hello ^_^ MAHMOUD.T");
+        System.out.println("Welcom in - MAHMOUD.T - Worled (^^_^^)");
         launch(args);
-    }
+    }//END main;
 
-}
+}//END All;
