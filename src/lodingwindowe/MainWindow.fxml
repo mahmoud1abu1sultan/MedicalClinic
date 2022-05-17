@@ -1049,10 +1049,13 @@
         </Pane>
         <Pane fx:id="homePane" layoutX="50.0" layoutY="50.0" onMouseClicked="#onClickPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2f353d;">
             <children>
-            <ImageView fitHeight="500.0" fitWidth="500.0" layoutX="20.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
-                <Pane layoutX="190.0" layoutY="14.0" prefHeight="270.0" prefWidth="575.0" style="-fx-background-color: #0f62ba;" visible="false">
+            <ImageView fitHeight="586.0" fitWidth="984.0" layoutX="7.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/wallpaperbetter.com_1280x768%20(3).jpg" />
+               </image></ImageView>
+                <Pane layoutX="190.0" layoutY="14.0" opacity="0.8" prefHeight="270.0" prefWidth="575.0" style="-fx-background-color: #0f62ba;">
                     <children>
-                        <ImageView fitHeight="270.0" fitWidth="486.0" layoutX="143.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="270.0" fitWidth="486.0" layoutX="143.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../Images/wallpaperbetter.com_1920x1200.jpg" />
                             </image>
@@ -1105,7 +1108,7 @@
                         </Label>
                     </children>
                 </Pane>
-                <Pane layoutX="190.0" layoutY="289.0" prefHeight="301.0" prefWidth="152.0" style="-fx-background-color: #ffffff; -fx-border-color: #4deae0; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;" visible="false">
+                <Pane layoutX="190.0" layoutY="289.0" prefHeight="301.0" prefWidth="152.0" style="-fx-background-color: rgba(255, 255, 255,0.7); -fx-border-color: #4deae0; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
                     <children>
                         <Label layoutX="22.0" layoutY="11.0" text="Times of work" textFill="#40433a">
                             <font>
@@ -1175,7 +1178,7 @@
                         <Separator layoutY="43.0" prefHeight="3.0" prefWidth="152.0" style="-fx-background-color: #2f353d;" />
                     </children>
                 </Pane>
-                <Pane layoutX="350.0" layoutY="289.0" prefHeight="301.0" prefWidth="415.0" style="-fx-background-color: #ffffff; -fx-border-color: #4deae0; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;" visible="false">
+                <Pane layoutX="350.0" layoutY="289.0" prefHeight="301.0" prefWidth="415.0" style="-fx-background-color: rgba(255, 255, 255,0.7); -fx-border-color: #4deae0; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
                     <children>
                         <Label layoutX="14.0" layoutY="7.0" text="latest news" textFill="#40433a">
                             <font>
@@ -1194,11 +1197,11 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </Label>
-                        <ScrollPane fx:id="m$lastNewsAorede" layoutY="40.0" prefHeight="262.0" prefWidth="415.0" style="-fx-background-color: #ffffff;">
+                        <ScrollPane fx:id="m$lastNewsAorede" layoutY="40.0" prefHeight="262.0" prefWidth="415.0" style="-fx-background-color: non; -fx-color: non;">
                             <content>
-                                <VBox fx:id="m$listOf_LastNews" layoutX="5.0" prefHeight="200.0" prefWidth="413.0">
+                                <VBox fx:id="m$listOf_LastNews" layoutX="5.0" prefHeight="200.0" prefWidth="413.0" style="-fx-background-color: non;">
                                     <children>
-                                        <VBox prefHeight="10.0" prefWidth="415.0" spacing="1.0">
+                                        <VBox prefHeight="10.0" prefWidth="415.0" spacing="1.0" style="-fx-background-color: rgba(255, 255, 255,0); -fx-color: non;">
                                             <children>
                                                 <Label fx:id="m$subNews1_t" style="-fx-background-color: #a9e151; -fx-background-radius: 10;" text="Appointments" textFill="#f5f4f4">
                                                     <font>
@@ -1216,7 +1219,7 @@
                                                 <Insets left="10.0" top="5.0" />
                                             </padding>
                                         </VBox>
-                                        <VBox prefHeight="10.0" prefWidth="415.0" spacing="1.0">
+                                        <VBox prefHeight="10.0" prefWidth="415.0" spacing="1.0" style="-fx-background-color: rgba(255, 255, 255,0.7);">
                                             <children>
                                                 <Label fx:id="m$subNews2_t" style="-fx-background-color: #a9e151; -fx-background-radius: 10;" text="Doctores" textFill="#f5f4f4">
                                                     <font>
@@ -1234,7 +1237,7 @@
                                                 <Insets left="10.0" top="5.0" />
                                             </padding>
                                         </VBox>
-                                        <VBox prefHeight="10.0" prefWidth="415.0" spacing="1.0">
+                                        <VBox prefHeight="10.0" prefWidth="415.0" spacing="1.0" style="-fx-background-color: rgba(255, 255, 255,0.7);">
                                             <children>
                                                 <Label fx:id="m$subNews3_t" style="-fx-background-color: #a9e151; -fx-background-radius: 10;" text="Add a patient" textFill="#f5f4f4">
                                                     <font>
@@ -1252,7 +1255,7 @@
                                                 <Insets left="10.0" top="5.0" />
                                             </padding>
                                         </VBox>
-                                        <VBox prefHeight="10.0" prefWidth="415.0" spacing="1.0">
+                                        <VBox prefHeight="10.0" prefWidth="415.0" spacing="1.0" style="-fx-background-color: rgba(255, 255, 255,0.7);">
                                             <children>
                                                 <Label fx:id="m$subNews4_t" style="-fx-background-color: #a9e151; -fx-background-radius: 10;" text="Patient referrals" textFill="#f5f4f4">
                                                     <font>
@@ -1270,7 +1273,7 @@
                                                 <Insets left="10.0" top="5.0" />
                                             </padding>
                                         </VBox>
-                                        <VBox prefHeight="10.0" prefWidth="415.0" spacing="1.0">
+                                        <VBox prefHeight="10.0" prefWidth="415.0" spacing="1.0" style="-fx-background-color: rgba(255, 255, 255,0.7);">
                                             <children>
                                                 <Label fx:id="m$subNews5_t" style="-fx-background-color: #a9e151; -fx-background-radius: 10;" text="Appointments" textFill="#f5f4f4">
                                                     <font>
@@ -1288,7 +1291,7 @@
                                                 <Insets left="10.0" top="5.0" />
                                             </padding>
                                         </VBox>
-                                        <VBox prefHeight="10.0" prefWidth="415.0" spacing="1.0">
+                                        <VBox prefHeight="10.0" prefWidth="415.0" spacing="1.0" style="-fx-background-color: rgba(255, 255, 255,0.7);">
                                             <children>
                                                 <Label fx:id="m$subNews6_t" style="-fx-background-color: #a9e151; -fx-background-radius: 10;" text="Patient referrals" textFill="#f5f4f4">
                                                     <font>
@@ -1310,24 +1313,24 @@
                                 </VBox>
                             </content>
                         </ScrollPane>
-                        <Pane fx:id="m$pane_addNews" layoutX="8.0" layoutY="43.0" prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #15191c; -fx-border-color: #a9e031; -fx-border-width: 0.5;" visible="false">
+                        <Pane fx:id="m$pane_addNews" layoutX="8.0" layoutY="43.0" prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: non; -fx-border-color: #a9e031; -fx-border-width: 0.5;" visible="false">
                             <children>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0" spacing="5.0" style="-fx-background-color: non; -fx-border-color: #4deae0; -fx-border-width: 0.5;">
                                     <children>
-                                        <Label text="News Title" textFill="#a9e031">
+                                        <Label text="News Title" textFill="#679300">
                                             <font>
                                                 <Font name="Verdana Bold" size="14.0" />
                                             </font>
                                         </Label>
-                                        <TextField fx:id="m$newsTitle" prefHeight="40.0" prefWidth="260.0" promptText="News Title" style="-fx-border-color: #a9e031; -fx-border-width: 2; -fx-background-color: #1f242a; -fx-text-fill: #ffffff;" />
-                                        <Label text="Description" textFill="#a9e031">
+                                        <TextField fx:id="m$newsTitle" prefHeight="40.0" prefWidth="260.0" promptText="News Title" style="-fx-border-color: #a9e031; -fx-border-width: 2; -fx-background-color: rgba(27, 40, 64,0.9); -fx-text-fill: #ffffff;" />
+                                        <Label text="Description" textFill="#679300">
                                             <font>
                                                 <Font name="Verdana Bold" size="14.0" />
                                             </font>
                                         </Label>
-                                        <TextField fx:id="m$newsDescription" layoutX="20.0" layoutY="94.0" prefHeight="40.0" prefWidth="260.0" promptText="Description" style="-fx-border-color: #a9e031; -fx-border-width: 2; -fx-background-color: #1f242a; -fx-text-fill: #ffffff;" />
+                                        <TextField fx:id="m$newsDescription" layoutX="20.0" layoutY="94.0" prefHeight="40.0" prefWidth="260.0" promptText="Description" style="-fx-border-color: #a9e031; -fx-border-width: 2; -fx-background-color: rgba(27, 40, 64,0.9); -fx-text-fill: #ffffff;" />
                                         <Separator fx:id="m$seperator" prefHeight="3.0" prefWidth="415.0" style="-fx-background-color: #4deae0;" />
-                                        <Button mnemonicParsing="false" onMouseClicked="#add_LastNews" style="-fx-background-color: #15191c; -fx-border-color: #a9e031; -fx-border-width: 2; -fx-text-fill: #8a948c;" text="Button" textFill="#a9e031">
+                                        <Button mnemonicParsing="false" onMouseClicked="#add_LastNews" style="-fx-background-color: rgba(27, 40, 64,0.9); -fx-border-color: #a9e031; -fx-border-width: 2; -fx-text-fill: #8a948c;" text="Button" textFill="#a9e031">
                                             <VBox.margin>
                                                 <Insets top="5.0" />
                                             </VBox.margin>
@@ -1344,9 +1347,9 @@
                         </Pane>
                     </children>
                 </Pane>
-                <VBox alignment="CENTER" layoutX="14.0" layoutY="11.0" prefHeight="582.0" prefWidth="168.0" spacing="20.0" visible="false">
+                <VBox alignment="CENTER" layoutX="14.0" layoutY="11.0" prefHeight="582.0" prefWidth="168.0" spacing="20.0">
                     <children>
-                        <Pane fx:id="doctorPaneSup" prefHeight="138.0" prefWidth="168.0" style="-fx-background-color: rgba(255, 255, 255,1); -fx-background-radius: 20; -fx-border-color: #4deae0; -fx-border-radius: 20; -fx-border-width: 2;">
+                        <Pane fx:id="doctorPaneSup" prefHeight="138.0" prefWidth="168.0" style="-fx-background-color: rgba(255, 255, 255,0.7); -fx-background-radius: 20; -fx-border-color: #4deae0; -fx-border-radius: 20; -fx-border-width: 2;">
                             <children>
                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="105.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -1378,7 +1381,7 @@
                                 </Label>
                             </children>
                         </Pane>
-                        <Pane fx:id="nursesPaneSup" prefHeight="138.0" prefWidth="168.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-border-color: #4deae0; -fx-border-radius: 20; -fx-border-width: 2;">
+                        <Pane fx:id="nursesPaneSup" prefHeight="138.0" prefWidth="168.0" style="-fx-background-color: rgba(255, 255, 255,0.7); -fx-background-radius: 20; -fx-border-color: #4deae0; -fx-border-radius: 20; -fx-border-width: 2;">
                             <children>
                                 <Separator layoutX="13.0" layoutY="67.0" prefHeight="0.0" prefWidth="143.0" />
                                 <Label fx:id="numberNurserMale" layoutX="120.0" layoutY="79.0" prefHeight="20.0" prefWidth="30.0" text="0">
@@ -1410,7 +1413,7 @@
                                 </VBox>
                             </children>
                         </Pane>
-                        <Pane fx:id="PatientPaneSup" prefHeight="247.0" prefWidth="168.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-border-color: #4deae0; -fx-border-radius: 20; -fx-border-width: 2;">
+                        <Pane fx:id="PatientPaneSup" prefHeight="247.0" prefWidth="168.0" style="-fx-background-color: rgba(255, 255, 255,0.7); -fx-background-radius: 20; -fx-border-color: #4deae0; -fx-border-radius: 20; -fx-border-width: 2;">
                             <children>
                                 <Separator layoutX="13.0" layoutY="67.0" prefHeight="0.0" prefWidth="143.0" />
                                 <Label fx:id="numberPatientFemale" layoutX="120.0" layoutY="79.0" prefHeight="20.0" prefWidth="30.0" text="0">
@@ -1469,9 +1472,9 @@
                         </Pane>
                     </children>
                 </VBox>
-                <Pane fx:id="listOf_Newsletter1" layoutX="773.0" layoutY="12.0" prefHeight="576.0" prefWidth="220.0" style="-fx-background-color: #ffffff; -fx-border-color: #4deae0; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;" visible="false">
+                <Pane fx:id="listOf_Newsletter1" layoutX="773.0" layoutY="12.0" prefHeight="576.0" prefWidth="220.0" style="-fx-background-color: rgba(255, 255, 255,0.7); -fx-border-color: #4deae0; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
                     <children>
-                        <Label layoutX="14.0" layoutY="3.0" text="Newsletter" textFill="#40433a">
+                        <Label layoutX="14.0" layoutY="7.0" text="Newsletter" textFill="#40433a">
                             <font>
                                 <Font name="Calibri" size="19.0" />
                             </font>
@@ -1481,7 +1484,7 @@
                             <content>
                                 <AnchorPane prefWidth="213.0">
                                     <children>
-                                        <VBox alignment="TOP_CENTER" prefWidth="213.0" spacing="2.0">
+                                        <VBox alignment="TOP_CENTER" prefWidth="213.0" spacing="2.0" style="-fx-background-color: rgba(255, 255, 255,0.7);">
                                             <children>
                                                 <Label text="Primary Doctors for Men">
                                                     <font>
@@ -1493,7 +1496,7 @@
                                                         <Image url="@../Images/pationt.jpg" />
                                                     </image>
                                                 </ImageView>
-                                                <TextArea editable="false" prefWidth="210.0" style="-fx-background-color: non; -fx-border-color: non;" text="Men’s health  doctor – what does&#10;that mean? After all, both men&#10;andwomen have many health &#10;eeds in common.&#10;Routine blood pressure checks,&#10;screening and maintenance for&#10;conditions such as heart disease,&#10;diabetes and cancers, treatment for&#10;injuries, infections and chronic&#10;illnesses, mental health screening&#10;and referrals can all fall under the&#10;umbrella of primary care –regardles&#10;of sex or gender.&#10;" />
+                                                <TextArea editable="false" prefWidth="210.0" style="-fx-background-color: rgba(255, 255, 255,0.7); -fx-border-color: non;" text="Men’s health  doctor – what does&#10;that mean? After all, both men&#10;andwomen have many health &#10;eeds in common.&#10;Routine blood pressure checks,&#10;screening and maintenance for&#10;conditions such as heart disease,&#10;diabetes and cancers, treatment for&#10;injuries, infections and chronic&#10;illnesses, mental health screening&#10;and referrals can all fall under the&#10;umbrella of primary care –regardles&#10;of sex or gender.&#10;" />
                                                 <Separator prefHeight="3.0" prefWidth="152.0" style="-fx-background-color: #2f353d;" />
                                                 <Label text="3 STEPS TO SURVIVING  ..">
                                                     <font>
