@@ -7,7 +7,7 @@ package lodingwindowe;
 
 /**
  *
- * @author mahmo
+ * @author MAHMOUD.T
  */
 public class User {
 
@@ -25,7 +25,6 @@ public class User {
         this.gender = gender;
         this.age = age;
     }
-
 
     public User(String firstName, String lastName, String email, String password, String gender, int age) {
         this.firstName = firstName;

@@ -5,15 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Time;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.layout.VBox;
 
 /**
  *
@@ -372,10 +367,10 @@ public class MyDatabase {
             PreparedStatement statementFname;
             PreparedStatement statement;
             try {
-                statementFname = conn.prepareStatement("SELECT Fname, Lname FROM doctor WHERE email='" +emailForSerch+"'");
+                statementFname = conn.prepareStatement("SELECT Fname, Lname FROM doctor WHERE email='" + emailForSerch + "'");
                 ResultSet rsFn = statementFname.executeQuery();
                 rsFn.next();
-                String fullName = rsFn.getString("FName") +" "+rsFn.getString("Lname");
+                String fullName = rsFn.getString("FName") + " " + rsFn.getString("Lname");
                 //------Number Start GO>
                 statement = conn.prepareStatement("SELECT COUNT(supervising_doctor) AS num_rs FROM patient WHERE supervising_doctor='" + fullName + "'");
                 ResultSet rsP = statement.executeQuery();
@@ -590,6 +585,7 @@ public class MyDatabase {
         }
     }//END;
     //---
+
     public static void delete_Patient(Patients p) {
         if (conn == null) {
             getConnection();

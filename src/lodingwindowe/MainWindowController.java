@@ -40,7 +40,7 @@ import javafx.stage.StageStyle;
 /**
  * FXML Controller class
  *
- * @author mahmo
+ * @author MAHMOUD.T
  */
 public class MainWindowController implements Initializable {
 

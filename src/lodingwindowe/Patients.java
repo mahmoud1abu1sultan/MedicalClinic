@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author mahmo
+ * @author MAHMOUD.T
  */
 public class Patients extends User {
 
