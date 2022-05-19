@@ -111,7 +111,7 @@ public class FXMLDocumentController implements Initializable {
             public void run() {
                 try {
                     taskLoding();
-                    Thread.sleep(8000);//10000 -> 15000
+                    Thread.sleep(10000);//10000 -> 15000
                 } catch (InterruptedException ex) {
                     System.out.println(ex + " (-_-)");
                 }//END;

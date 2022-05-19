@@ -599,4 +599,30 @@ public class MyDatabase {
         }
     }//END;
     //---
+
+    public static void edite_doctor(Doctors d, String oldEmaile) {
+        if (conn == null) {
+            getConnection();
+        } else {
+            try {
+                PreparedStatement statement = conn.prepareStatement("UPDATE doctor SET Fname=? ,Lname=?, age=? ,email=? ,specialization=? WHERE email='" + oldEmaile + "'");
+                statement.setString(1, d.getFirstName());
+                statement.setString(2, d.getLastName());
+                statement.setInt(3, d.getAge());
+                statement.setString(4, d.getEmail());
+                statement.setString(5, d.getSpecialization());
+                statement.executeUpdate();
+            } catch (SQLException ex) {
+                System.out.println(ex + " Exception (_-_)");
+            }
+        }
+    }//END;
+    //---
+
+    public static String attreputeOldEmailDoctor;
+
+    public static void opjectOldEmailDoctor(String s) {
+        attreputeOldEmailDoctor = s;
+    }//END;
+    //---
 }//END MyDatabase;

@@ -488,6 +488,67 @@
                 </VBox>
             </children>
         </Pane>
+      <ImageView fx:id="doctorImagePane" fitHeight="591.0" fitWidth="977.0" layoutX="62.0" layoutY="57.0" opacity="0.32" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Images/wallpaperbetter.com_1280x768%20(1).jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="di$editeInfo_Pane" layoutX="376.0" layoutY="72.0" prefHeight="557.0" prefWidth="348.0" style="-fx-border-color: #4deae0; -fx-border-width: 2;" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="57.0" text="First Name" textFill="#4deae0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="di$add_firstName" layoutX="13.0" layoutY="77.0" prefHeight="40.0" prefWidth="135.0" promptText="First Name" style="-fx-border-color: #4deae0; -fx-border-width: 2; -fx-background-color: #1f242a; -fx-text-fill: #ffffff;" />
+            <Button layoutX="44.0" layoutY="503.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#di$edite_infoGo" prefHeight="40.0" prefWidth="260.0" style="-fx-border-radius: 0; -fx-background-color: #1f242a;" text="Edite Information" textFill="#4deae0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Button>
+            <Separator layoutX="1.0" layoutY="35.0" prefHeight="0.0" prefWidth="45.0" style="-fx-background-color: #4deae0;" />
+            <Label layoutX="9.0" layoutY="5.0" text="Edite Information About D. My" textFill="#4deae0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="198.0" layoutY="57.0" text="First Name" textFill="#4deae0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="di$add_lastName" layoutX="198.0" layoutY="77.0" prefHeight="40.0" prefWidth="135.0" promptText="Last Name" style="-fx-border-color: #4deae0; -fx-border-width: 2; -fx-background-color: #1f242a; -fx-text-fill: #ffffff;" />
+            <Label layoutX="161.0" layoutY="117.0" text="Age" textFill="#4deae0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="di$add_age" layoutX="144.0" layoutY="137.0" prefHeight="40.0" prefWidth="61.0" promptText="Age" style="-fx-border-color: #4deae0; -fx-border-width: 2; -fx-background-color: #1f242a; -fx-text-fill: #ffffff;" />
+            <TextField fx:id="di$add_email" layoutX="13.0" layoutY="197.0" prefHeight="40.0" prefWidth="321.0" promptText="Email" style="-fx-border-color: #4deae0; -fx-border-width: 2; -fx-background-color: #1f242a; -fx-text-fill: #ffffff;" />
+            <Label layoutX="14.0" layoutY="177.0" text="Email" textFill="#4deae0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="237.0" text="Specialization" textFill="#4deae0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="di$specializationDoctor" layoutX="14.0" layoutY="257.0" prefHeight="40.0" prefWidth="321.0" promptText="Specialization" style="-fx-border-color: #4deae0; -fx-border-width: 2; -fx-background-color: #1f242a; -fx-text-fill: #ffffff;" />
+            <Label fx:id="p$add_wrong1" layoutX="100.0" layoutY="442.0" style="-fx-background-color: #cfcfcf; -fx-border-radius: 10; -fx-background-radius: 10;" text="Verify that all data is correct" textFill="#ff300c" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="1.0" right="1.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
         <Pane fx:id="doctorPane" layoutX="50.0" layoutY="50.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2f353d;" visible="false">
             <children>
                 <ImageView fitHeight="591.0" fitWidth="977.0" layoutX="12.0" layoutY="7.0" opacity="0.32" pickOnBounds="true" preserveRatio="true">
@@ -1726,6 +1787,19 @@
                         <Font name="Trebuchet MS" size="14.0" />
                     </font>
                 </Label>
+            <Label fx:id="di$successfullEditeInfo" layoutX="390.0" layoutY="11.0" text="Operation Accomplished Successfully ^^_^^" visible="false">
+               <font>
+                  <Font name="Sylfaen" size="20.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#bdff2e" />
+                        <Stop color="#37eeff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
             </children>
         </Pane>
         <HBox fx:id="homeText" alignment="CENTER_LEFT" layoutX="50.0" layoutY="115.0" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #1f242a;" visible="false">

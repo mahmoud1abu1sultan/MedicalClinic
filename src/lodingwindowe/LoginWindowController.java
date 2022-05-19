@@ -106,7 +106,7 @@ public class LoginWindowController implements Initializable {
     private TextField oldEmail;
     @FXML
     private Label loginNotCorrect;
-//media-
+//media^^^-
     @FXML
     private RadioButton doctorSelect;
     @FXML
@@ -126,7 +126,7 @@ public class LoginWindowController implements Initializable {
         //---------------------
     }//END initialize;
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//++minimze|close
+//++menimization|close
 
     @FXML
     private void showMinimizeRed(MouseEvent event) {
@@ -237,6 +237,7 @@ public class LoginWindowController implements Initializable {
             Parent root = (Parent) loader.load();
             MainWindowController con = loader.getController();
             con.getInfo(loginEmail.getText());
+            MyDatabase.opjectOldEmailDoctor(loginEmail.getText());
             //-
 //            MyDatabase db = new MyDatabase();
 //            db.getInfo(loginEmail.getText());

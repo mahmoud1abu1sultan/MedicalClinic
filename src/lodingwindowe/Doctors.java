@@ -18,6 +18,12 @@ public class Doctors extends User {
         this.specialization = specialization;
     }//END;
 
+    public Doctors(String firstName, String lastName, int age, String email, String specialization) {
+        super(firstName, lastName, age, email);
+        this.specialization = specialization;
+    }
+//----------------------------------------
+
     public String getSpecialization() {
         return specialization;
     }//END;

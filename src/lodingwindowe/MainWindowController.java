@@ -319,6 +319,24 @@ public class MainWindowController implements Initializable {
     private Label p$edite_wrong2;
     @FXML
     private ComboBox<String> p$leav_comboBox_supervisingDoctor;
+    @FXML
+    private Pane di$editeInfo_Pane;
+    @FXML
+    private TextField di$add_firstName;
+    @FXML
+    private TextField di$add_lastName;
+    @FXML
+    private TextField di$add_age;
+    @FXML
+    private TextField di$add_email;
+    @FXML
+    private TextField di$specializationDoctor;
+    @FXML
+    private Label p$add_wrong1;
+    @FXML
+    private Label di$successfullEditeInfo;
+    @FXML
+    private ImageView doctorImagePane;
 
 //    ----------------------------------
     /**
@@ -392,14 +410,24 @@ public class MainWindowController implements Initializable {
 //***************************//
 
     public void getInfo(String s) {
+
         HashMap<String, String> ofin_d = MyDatabase.doctorInfo(s);
         d$doctorName.setText(ofin_d.get("fName") + " " + ofin_d.get("lName"));
         d$doctorAge.setText(ofin_d.get("age"));
         d$doctorGender.setText(ofin_d.get("gender"));
         d$doctorSpecialization.setText(ofin_d.get("specialization"));
-//        Image img = new Image("doctor (1).png");
-//        d$doctorImage.setImage(img);
+//          Image img = new Image("doctor (1).png");
+//          d$doctorImage.setImage(img);
 //---------------------
+
+        HashMap<String, String> ofin_dinputtextfield = MyDatabase.doctorInfo(s);
+        di$add_firstName.setText(ofin_dinputtextfield.get("fName"));
+        di$add_lastName.setText(ofin_dinputtextfield.get("lName"));
+        di$add_age.setText(ofin_dinputtextfield.get("age"));
+        di$add_email.setText(s);
+        di$specializationDoctor.setText(ofin_dinputtextfield.get("specialization"));
+//---------------------
+
         HashMap<String, String> ofin_p = MyDatabase.doctorInfoForPatients(s);
         d$numberPatients.setText(ofin_p.get("patients"));
         d$numberPatientsMale.setText(ofin_p.get("patientMale"));
@@ -867,13 +895,63 @@ public class MainWindowController implements Initializable {
     private void d$editeTiom_of_workDocotor(MouseEvent event) {//???????
     }
 
+    //---
     @FXML
     private void d$editeDoctor(MouseEvent event) {
-        
-    }
+        doctorPane.setVisible(false);
+        doctorImagePane.setVisible(true);
+        di$editeInfo_Pane.setVisible(true);
+    }//END;
 
     @FXML
     private void d$editeTodayAppointments(MouseEvent event) {//?????????
     }
+    //---
+
+    @FXML
+    private void di$edite_infoGo(MouseEvent event) {
+        di$editeInfo_Pane.setVisible(false);
+        doctorImagePane.setVisible(false);
+        //------------------------------------
+        String emOld = MyDatabase.attreputeOldEmailDoctor;
+
+        String fn = di$add_firstName.getText();
+        String ln = di$add_lastName.getText();
+        int ag = Integer.valueOf(di$add_age.getText());
+        String emNew = di$add_email.getText();
+        String sp = di$specializationDoctor.getText();
+
+        if (!fn.isEmpty() && !ln.isEmpty() && !emNew.isEmpty() && !sp.isEmpty()) {
+            Doctors d = new Doctors(fn, ln, ag, emNew, sp);
+            MyDatabase.edite_doctor(d, emOld);
+
+            HashMap<String, String> ofin_dEdite = MyDatabase.doctorInfo(emOld);
+            d$doctorName.setText(ofin_dEdite.get("fName") + " " + ofin_dEdite.get("lName"));
+            d$doctorAge.setText(ofin_dEdite.get("age"));
+            d$doctorGender.setText(ofin_dEdite.get("gender"));
+            d$doctorSpecialization.setText(ofin_dEdite.get("specialization"));
+        }
+        //---
+        doctorPane.setVisible(true);
+        //----------------------------------
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                di$successfullEditeInfo.setVisible(true);
+            }
+        }).start();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException ex) {
+                    System.out.println(ex + "-_-");
+                }
+                di$successfullEditeInfo.setVisible(false);
+            }
+        }).start();
+    }//END;
 
 }//END ALL;
